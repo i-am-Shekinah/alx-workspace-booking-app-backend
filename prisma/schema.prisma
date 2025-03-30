@@ -23,7 +23,7 @@ model User {
   password String
   firstName String
   lastName String
-  role Role @default learner
+  role Role @default(learner)
   preferences Json?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -32,5 +32,5 @@ model User {
 enum Role {
   learner
   employee
-  admin
+  admin 
 }
