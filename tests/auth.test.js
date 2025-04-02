@@ -48,7 +48,7 @@ describe('User Signup', () => {
     });
 
     expect(response.statusCode).toBe(400)
-    expect(response.body.error).toBe('username is already taken');
+    expect(response.body.error).toBe('Username is already taken');
   });
 
 
@@ -72,7 +72,7 @@ describe('User Signup', () => {
     });
 
     expect(response.statusCode).toBe(400);
-    expect(response.body.error).toBe('email is already taken');
+    expect(response.body.error).toBe('Email is already taken');
   });
 
 
@@ -138,7 +138,7 @@ describe('User login', () => {
     expect(response.statusCode).toBe(400);
     expect(response.body.errors[0]).toBe('\"email\" is required')
   });
-  
+
 
   test('Should fail if password is missing', async () => {
     const response = await loginUser({
